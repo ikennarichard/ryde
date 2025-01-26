@@ -1,1 +1,0 @@
-For anyone wondering why KeyboardAvoidingView doesnt work at 1:20:00,  it has to wrap components that it can move, so ideally use it in the SignUp Component wrapping the entire thing and not individually in the InputField Component. 
