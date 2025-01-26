@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "full-stack-react-native",
-    "slug": "full-stack-react-native",
+    "name": "ryde",
+    "slug": "ryde",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
