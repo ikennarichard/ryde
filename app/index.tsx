@@ -1,20 +1,13 @@
 import { useAuth } from "@clerk/clerk-expo";
-import { Redirect, useRouter } from "expo-router";
-import { useEffect } from "react";
+import { Redirect } from "expo-router";
 
 const Home = () => {
-  const { isLoaded, isSignedIn } = useAuth();
-  const router = useRouter();
+  const { isSignedIn } = useAuth();
 
-  useEffect(() => {
-    if (isLoaded) {
-      if (!isSignedIn) {
-        router.replace("/(auth)/welcome");
-      }
-    }
-  }, [isLoaded, isSignedIn]);
-  
-  return <Redirect href="/(root)/(tabs)/home" />;
+  if (isSignedIn) return <Redirect href="/(root)/(tabs)/home" />;
+
+  return <Redirect href="/(auth)/welcome" />;
+
 };
 
 export default Home;
